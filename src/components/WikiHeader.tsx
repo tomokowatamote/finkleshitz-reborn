@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import logoImg from "@/assets/sml-wiki-logo-new.png";
 import fireImg from "@/assets/fire-header.png";
 
@@ -6,13 +6,13 @@ const navLinks = [
   { label: "Unavailable", path: "#" },
   { label: "Unavailable", path: "#" },
   { label: "​Unavailable", path: "#" },
-  { label: "Characters", path: "/characters" },
+  { label: "Characters", path: "/" },
   { label: "Unavailable", path: "#" },
 ];
 
 const WikiHeader = () => {
   const location = useLocation();
-  const isCharactersActive = location.pathname.startsWith("/characters");
+  const isCharactersActive = location.pathname === "/" || location.pathname.startsWith("/characters");
 
   return (
     <header className="relative z-10">
@@ -26,22 +26,31 @@ const WikiHeader = () => {
 
       <div className="flex items-start justify-between px-4 py-2">
         {/* Logo */}
-        <a href="/" className="relative z-10">
+        <Link to="/" className="relative z-10">
           <img src={logoImg} alt="SML Wiki" className="h-20 w-auto rounded-none" />
-        </a>
+        </Link>
 
         {/* Navigation */}
         <nav className="flex items-center gap-1 pt-4 relative z-10 flex-wrap justify-end">
           {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.path}
-              className={`wiki-nav-link ${
-                link.label === "Characters" && isCharactersActive ? "active" : ""
-              }`}
-            >
-              {link.label}
-            </a>
+            link.path === "#" ? (
+              <span
+                key={link.label}
+                className="wiki-nav-link cursor-not-allowed"
+              >
+                {link.label}
+              </span>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.path}
+                className={`wiki-nav-link ${
+                  link.label === "Characters" && isCharactersActive ? "active" : ""
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
         </nav>
       </div>
