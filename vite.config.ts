@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/finkleshitz-reborn/" : "/",
+  base: process.env.GITHUB_PAGES === "true" ? "/finkleshitz-reborn/" : "/",
   server: {
     host: "::",
     port: 8080,
