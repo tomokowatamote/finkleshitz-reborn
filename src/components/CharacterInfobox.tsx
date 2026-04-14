@@ -1,0 +1,67 @@
+import { useState } from "react";
+import characterImg from "@/assets/dr-finkleshitz.jpg";
+
+const CharacterInfobox = () => {
+  const [activeTab, setActiveTab] = useState<"current" | "former">("current");
+
+  return (
+    <div className="w-[240px] shrink-0 border border-border bg-wiki-infobox-bg">
+      {/* Header */}
+      <div className="bg-wiki-infobox-header border-b border-border px-2 py-1">
+        <h3 className="text-center text-sm font-bold text-accent" style={{ fontFamily: "'Special Elite', serif" }}>
+          Appearance
+        </h3>
+      </div>
+
+      {/* Tabs */}
+      <div className="flex border-b border-border">
+        <button
+          onClick={() => setActiveTab("current")}
+          className={`flex-1 px-2 py-1 text-xs transition-colors ${
+            activeTab === "current"
+              ? "bg-wiki-infobox-header text-accent"
+              : "bg-secondary text-muted-foreground hover:bg-wiki-infobox-header/50"
+          }`}
+        >
+          Current
+        </button>
+        <button
+          onClick={() => setActiveTab("former")}
+          className={`flex-1 px-2 py-1 text-xs transition-colors ${
+            activeTab === "former"
+              ? "bg-wiki-infobox-header text-accent"
+              : "bg-secondary text-muted-foreground hover:bg-wiki-infobox-header/50"
+          }`}
+        >
+          Former
+        </button>
+      </div>
+
+      {/* Image */}
+      <div className="p-2">
+        <div className="border border-accent/30">
+          <img
+            src={characterImg}
+            alt="Dr. Fredrick Finkleshitz"
+            className="w-full h-auto"
+          />
+        </div>
+        <p className="text-xs text-foreground mt-1 leading-tight">
+          Dr. Finkleshitz after making a breakthrough experiment (he made this awesome theme song):
+        </p>
+
+        {/* Audio player mock */}
+        <div className="mt-2 bg-secondary border border-border flex items-center gap-1 p-1">
+          <button className="text-accent text-xs px-1">▶</button>
+          <div className="flex-1 h-2 bg-muted relative">
+            <div className="absolute left-0 top-0 h-full w-1/3 bg-accent/60" />
+          </div>
+          <span className="text-xs text-muted-foreground">0:30</span>
+          <button className="text-accent text-xs px-1">🔊</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CharacterInfobox;
