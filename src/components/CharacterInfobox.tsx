@@ -1,4 +1,4 @@
-import characterImg from "@/assets/dr-finkleshitz.jpg";
+import characterImg from "@/assets/dr-rangel.png";
 
 const CharacterInfobox = () => {
 
@@ -28,7 +28,7 @@ const CharacterInfobox = () => {
           />
         </div>
         <p className="text-xs text-foreground mt-1 leading-tight">
-          Dr. Finkleshitz after making a breakthrough experiment (he made this awesome theme song):
+          Dr. Finklerangel Standing outside the secret door which was his old Laboratory.
         </p>
 
         {/* Audio player mock */}
