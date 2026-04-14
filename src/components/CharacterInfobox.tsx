@@ -1,8 +1,6 @@
-import { useState } from "react";
 import characterImg from "@/assets/dr-finkleshitz.jpg";
 
 const CharacterInfobox = () => {
-  const [activeTab, setActiveTab] = useState<"current" | "former">("current");
 
   return (
     <div className="w-[240px] shrink-0 border border-border bg-wiki-infobox-bg">
@@ -13,28 +11,11 @@ const CharacterInfobox = () => {
         </h3>
       </div>
 
-      {/* Tabs */}
+      {/* Single tab */}
       <div className="flex border-b border-border">
-        <button
-          onClick={() => setActiveTab("current")}
-          className={`flex-1 px-2 py-1 text-xs transition-colors ${
-            activeTab === "current"
-              ? "bg-wiki-infobox-header text-accent"
-              : "bg-secondary text-muted-foreground hover:bg-wiki-infobox-header/50"
-          }`}
-        >
+        <div className="flex-1 px-2 py-1 text-xs bg-wiki-infobox-header text-accent text-center">
           Current
-        </button>
-        <button
-          onClick={() => setActiveTab("former")}
-          className={`flex-1 px-2 py-1 text-xs transition-colors ${
-            activeTab === "former"
-              ? "bg-wiki-infobox-header text-accent"
-              : "bg-secondary text-muted-foreground hover:bg-wiki-infobox-header/50"
-          }`}
-        >
-          Former
-        </button>
+        </div>
       </div>
 
       {/* Image */}
