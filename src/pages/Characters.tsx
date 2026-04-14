@@ -138,7 +138,7 @@ const CharacterGrid = ({ chars }: { chars: typeof characters }) => (
             loading="lazy"
             width={110}
             height={110}
-            className="w-full h-full object-cover"
+            className={`w-full h-full ${char.id === "dr-finkleshitz" ? "object-fill" : "object-cover"}`}
           />
         </div>
         <span className="text-foreground text-xs mt-1 text-center leading-tight group-hover:text-accent transition-colors">

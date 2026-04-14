@@ -10,7 +10,7 @@ import goldenImg from "@/assets/characters/golden.jpg";
 import freddyFidgetImg from "@/assets/characters/freddy-fidget.jpg";
 import luigiImg from "@/assets/characters/luigi.jpg";
 import mysteryImg from "@/assets/characters/mystery.jpg";
-import drFinkleshitzImg from "@/assets/dr-finkleshitz.jpg";
+import drFinkleshitzImg from "@/assets/dr-finkleshitz.png";
 
 export interface Character {
   id: string;
