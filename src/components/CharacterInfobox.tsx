@@ -1,8 +1,6 @@
-import { useState } from "react";
 import characterImg from "@/assets/dr-finkleshitz.jpg";
 
 const CharacterInfobox = () => {
-  const [activeTab, setActiveTab] = useState<"current" | "former">("current");
 
   return (
     <div className="w-[240px] shrink-0 border border-border bg-wiki-infobox-bg">
