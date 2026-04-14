@@ -57,6 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        wiki: {
+          title: "hsl(var(--wiki-title))",
+          heading: "hsl(var(--wiki-heading))",
+          text: "hsl(var(--wiki-text))",
+          link: "hsl(var(--wiki-link))",
+          "border-glow": "hsl(var(--wiki-border-glow))",
+          "infobox-bg": "hsl(var(--wiki-infobox-bg))",
+          "infobox-header": "hsl(var(--wiki-infobox-header))",
+          "content-bg": "hsl(var(--wiki-content-bg))",
+          "nav-bg": "hsl(var(--wiki-nav-bg))",
+          "nav-text": "hsl(var(--wiki-nav-text))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
