@@ -11,8 +11,6 @@ const CharacterInfobox = () => {
         </h3>
       </div>
 
-      </div>
-
       {/* Single tab */}
       <div className="flex border-b border-border">
         <div className="flex-1 px-2 py-1 text-xs bg-wiki-infobox-header text-accent text-center">
