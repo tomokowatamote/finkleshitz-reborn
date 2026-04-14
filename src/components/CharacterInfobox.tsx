@@ -11,28 +11,13 @@ const CharacterInfobox = () => {
         </h3>
       </div>
 
-      {/* Tabs */}
+      </div>
+
+      {/* Single tab */}
       <div className="flex border-b border-border">
-        <button
-          onClick={() => setActiveTab("current")}
-          className={`flex-1 px-2 py-1 text-xs transition-colors ${
-            activeTab === "current"
-              ? "bg-wiki-infobox-header text-accent"
-              : "bg-secondary text-muted-foreground hover:bg-wiki-infobox-header/50"
-          }`}
-        >
+        <div className="flex-1 px-2 py-1 text-xs bg-wiki-infobox-header text-accent text-center">
           Current
-        </button>
-        <button
-          onClick={() => setActiveTab("former")}
-          className={`flex-1 px-2 py-1 text-xs transition-colors ${
-            activeTab === "former"
-              ? "bg-wiki-infobox-header text-accent"
-              : "bg-secondary text-muted-foreground hover:bg-wiki-infobox-header/50"
-          }`}
-        >
-          Former
-        </button>
+        </div>
       </div>
 
       {/* Image */}
