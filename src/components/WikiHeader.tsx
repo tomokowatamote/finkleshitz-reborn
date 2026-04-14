@@ -1,13 +1,13 @@
 import { useLocation } from "react-router-dom";
-import logoImg from "@/assets/sml-wiki-logo.png";
+import logoImg from "@/assets/sml-wiki-logo-new.png";
 import fireImg from "@/assets/fire-header.png";
 
 const navLinks = [
-  { label: "Episodes", path: "#" },
-  { label: "Games", path: "#" },
-  { label: "Cast", path: "#" },
+  { label: "Unavailable", path: "#" },
+  { label: "Unavailable", path: "#" },
+  { label: "​Unavailable", path: "#" },
   { label: "Characters", path: "/characters" },
-  { label: "Places", path: "#" },
+  { label: "Unavailable", path: "#" },
 ];
 
 const WikiHeader = () => {
@@ -27,7 +27,7 @@ const WikiHeader = () => {
       <div className="flex items-start justify-between px-4 py-2">
         {/* Logo */}
         <a href="/" className="relative z-10">
-          <img src={logoImg} alt="SML Wiki" className="h-20 w-auto" />
+          <img src={logoImg} alt="SML Wiki" className="h-20 w-auto rounded-none" />
         </a>
 
         {/* Navigation */}
