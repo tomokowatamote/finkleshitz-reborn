@@ -30,7 +30,7 @@ export const characters: Character[] = [
   { id: "brooklyn-guy", name: "?", image: brooklynGuyImg, category: "other" },
   { id: "luigi", name: "?", image: luigiImg, category: "other" },
   { id: "freddy-fidget", name: "?", image: freddyFidgetImg, category: "other" },
-  { id: "golden", name: "?", image: goldenImg, category: "other" },
+  { id: "golden", name: "Mr. Goodman", image: goldenImg, category: "other" },
   { id: "dr-finkleshitz", name: "Dr. Finklerangel", image: drFinkleshitzImg, category: "other" },
   { id: "guy-unknown", name: "?", image: mysteryImg, category: "other" },
 ];
